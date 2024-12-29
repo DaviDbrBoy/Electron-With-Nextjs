@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                         // Melhor usar ES2020 ou superior para compatibilidade
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": false,                             // Permite a emissão dos arquivos JS
+    "esModuleInterop": true,
+    "module": "CommonJS",                        // Alterado para CommonJS para compatibilidade com Electron
+    "moduleResolution": "node",                  // Usar resolução de módulos compatível com Node.js
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "outDir": "./dist",                          // Diretório de saída para os arquivos compilados
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "main.ts"], 
+  "exclude": ["node_modules"]
+}
